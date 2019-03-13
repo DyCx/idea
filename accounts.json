@@ -1,0 +1,81 @@
+[
+  {
+    "$id": "9",
+    "$type": "SourceTree.Api.Host.Identity.Model.IdentityAccount, SourceTree.Api.Host.Identity",
+    "IsDefault": false,
+    "Authenticate": true,
+    "HostInstance": {
+      "$id": "10",
+      "$type": "SourceTree.Host.Atlassianaccount.AtlassianAccountInstance, SourceTree.Host.AtlassianAccount",
+      "Host": {
+        "$id": "11",
+        "$type": "SourceTree.Host.Atlassianaccount.AtlassianAccountHost, SourceTree.Host.AtlassianAccount",
+        "Id": "atlassian account"
+      },
+      "BaseUrl": "https://id.atlassian.com/"
+    },
+    "Credentials": {
+      "$id": "12",
+      "$type": "SourceTree.Api.Account.Basic.BasicAuthCredentials, SourceTree.Api.Account.Basic",
+      "Username": "",
+      "AuthenticationScheme": {
+        "$type": "SourceTree.Api.Account.Basic.BasicAuthAuthenticationScheme, SourceTree.Api.Account.Basic",
+        "Name": "Basic",
+        "Description": "密码",
+        "HeaderValuePrefix": "Basic",
+        "UsernameIsRequired": true
+      },
+      "EmailHash": null,
+      "DisplayName": null,
+      "AvatarURL": null,
+      "Id": "",
+      "Email": null
+    }
+  },
+  {
+    "$id": "13",
+    "$type": "SourceTree.Model.ScmAccount, SourceTree.Api.Host.Scm",
+    "IsDefault": false,
+    "Authenticate": true,
+    "HostInstance": {
+      "$id": "14",
+      "$type": "SourceTree.Host.Bitbucket.BitbucketInstance, SourceTree.Host.Bitbucket",
+      "Host": {
+        "$id": "15",
+        "$type": "SourceTree.Host.Bitbucket.BitbucketHost, SourceTree.Host.Bitbucket",
+        "Id": "bitbucket"
+      },
+      "BaseUrl": "https://bitbucket.org/",
+      "Protocol": "HTTPS"
+    },
+    "Credentials": {
+      "$id": "16",
+      "$type": "SourceTree.Api.Account.OAuth.TwoZero.OAuthTwoZeroCredentials, SourceTree.Api.Account.OAuth.TwoZero",
+      "AuthenticationScheme": {
+        "$type": "SourceTree.Api.Account.OAuth.TwoZero.OAuthTwoZeroBearerAuthenticationScheme, SourceTree.Api.Account.OAuth.TwoZero",
+        "Name": "OAuth",
+        "Description": "OAuth 令牌",
+        "HeaderValuePrefix": "Bearer",
+        "UsernameIsRequired": false
+      },
+      "Id": "8892fc64-3345-497c-87bd-aac3abee674c",
+      "Username": "dycxzr",
+      "DisplayName": null,
+      "Email": "dycxzr@163.com",
+      "AvatarURL": null,
+      "EmailHash": null
+    }
+  },
+  {
+    "$id": "17",
+    "$type": "SourceTree.Api.Host.Identity.Model.IdentityAccount, SourceTree.Api.Host.Identity",
+    "IsDefault": false,
+    "Authenticate": true,
+    "HostInstance": {
+      "$ref": "14"
+    },
+    "Credentials": {
+      "$ref": "16"
+    }
+  }
+]
